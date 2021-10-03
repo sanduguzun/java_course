@@ -7,26 +7,16 @@ public class MyFirstProgram {
       hello("user");
       hello("Sandu");
 
-      double l = 5;
-      System.out.println("area of square with sides " + l + " = " + area(l));
+      Square s = new Square(5);
+      System.out.println("area of square with sides " + s.l + " = " + s.area());
 
-      double a = 4;
-      double b = 6;
-      System.out.println("area of square with sides " + a + " and " + b + " = " + area(a,b));
+      Rectangle r = new Rectangle(4,6);
+      System.out.println("area of square with sides " + r.a + " and " + r.b + " = " + r.area());
   }
 
   public static void hello(String somebody) {
       System.out.println("Hello, " + somebody + "!");
   }
 
-  public static double area(double l){
-      return l * l;
-
-  }
-
-  public static double area(double  a, double  b) {
-      return a * b;
-
-  }
 
 }
