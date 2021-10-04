@@ -13,7 +13,6 @@ class Point {
   }
 
 
-
   public static double distance(Point p1, Point p2)
   {
     double dx = p2.x - p1.x;
