@@ -11,15 +11,15 @@ public class PointTest {
   public void TestDistance(){
       Point p1 = new Point(2,2);
       Point p2 = new Point(4,4);
-      System.out.println("Distance between points is " + Point.distance(p1, p2));
-      Assert.assertEquals(Point.distance(p1, p2),2.8284271247461903);
+      System.out.println("Distance between points is " + p1.distance(p2));
+      Assert.assertEquals(p1.distance(p2),2.8284271247461903);
   }
   @Test
   public void TestDistanceNegative(){
       Point p1 = new Point(2,2);
       Point p2 = new Point(4,4);
-      System.out.println("Distance between points is " + Point.distance(p1, p2));
-      Assert.assertFalse(Point.distance(p1, p2) == 2);
+      System.out.println("Distance between points is " + p1.distance(p2));
+      Assert.assertFalse(p1.distance(p2) == 2);
   }
 }
 

@@ -6,7 +6,7 @@ public class Task01 {
   {
     Point p1 = new Point(2,2);
     Point p2 = new Point(4,4);
-    System.out.println("Distance between points is " + Point.distance(p1, p2));
+    System.out.println("Distance between points is " + p1.distance(p2));
   }
 
 }
