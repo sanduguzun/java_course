@@ -16,7 +16,6 @@ public class ContactHelper extends HelperBase {
 
   public void goToContactsPage() {
     click(By.linkText("home"));
-    click(By.xpath("//table[@id='maintable']/tbody/tr[3]/td[7]/a/img"));
   }
 
   public void submitNewContact() {
@@ -35,5 +34,22 @@ public class ContactHelper extends HelperBase {
 
   public void goToCreateNewContact() {
     click(By.linkText("add new"));
+  }
+
+  public void selectContact() {
+    click(By.xpath("//*[@id='maintable']/tbody/tr[3]//input[@type='checkbox']"));
+  }
+
+  public void deleteSelectedContact() {
+    click(By.xpath("//input[@value='Delete']"));
+    wd.switchTo().alert().accept();
+  }
+
+  public void modifyContact() {
+    click(By.xpath("//*[@id='maintable']/tbody/tr[2]/td[8]/a/img"));
+  }
+
+  public void submitModifyContact() {
+    click(By.xpath("//*[@id='content']/form[1]/input[22]"));
   }
 }

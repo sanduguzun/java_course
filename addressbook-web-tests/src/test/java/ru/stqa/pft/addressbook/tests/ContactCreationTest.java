@@ -7,7 +7,7 @@ public class ContactCreationTest extends TestBase {
 
 
   @Test
-  public void testUserCreation() throws Exception {
+  public void testUserCreation() {
 
     app.getContactHelper().goToCreateNewContact();
     app.getContactHelper().fillContactForm(new ContactData("John", "Paul", "DOE", "QA", "WORLD", "JSD@mail.com", "Somewhere"));
@@ -15,5 +15,4 @@ public class ContactCreationTest extends TestBase {
     app.getContactHelper().goToContactsPage();
     app.getContactHelper().logout();
   }
-
 }
