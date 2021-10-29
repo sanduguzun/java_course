@@ -16,5 +16,4 @@ public class GroupCreationTests extends TestBase {
     app.logOutAddressBook();
   }
 
-
 }
