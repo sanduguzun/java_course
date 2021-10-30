@@ -1,5 +1,8 @@
 package ru.stqa.pft.addressbook.model;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.Select;
+
 public class ContactData {
   private final String firstName;
   private final String middleName;
@@ -8,8 +11,9 @@ public class ContactData {
   private final String company;
   private final String email;
   private final String phone2;
+  private String group;
 
-  public ContactData(String firstName, String middleName, String lastName, String title, String company, String email, String phone2) {
+  public ContactData(String firstName, String middleName, String lastName, String title, String company, String email, String phone2, String group) {
     this.firstName = firstName;
     this.middleName = middleName;
     this.lastName = lastName;
@@ -17,7 +21,9 @@ public class ContactData {
     this.company = company;
     this.email = email;
     this.phone2 = phone2;
+    this.group = group;
   }
+
 
   public String getFirstName() {
     return firstName;
@@ -46,4 +52,9 @@ public class ContactData {
   public String getPhone2() {
     return phone2;
   }
+
+  public String getGroup() {
+    return group;
+  }
+
 }
