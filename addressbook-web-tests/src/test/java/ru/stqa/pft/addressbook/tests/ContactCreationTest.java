@@ -10,13 +10,13 @@ import java.util.List;
 public class ContactCreationTest extends TestBase {
 
 
-  @Test(enabled = false)
+  @Test()
   public void testUserCreation() {
 
     app.goTo().goToHomePage();
     List<ContactData> before = app.getContactHelper().getContactList();
     app.getContactHelper().goToCreateNewContact();
-    ContactData contact = new ContactData("J", null, "D", null, null, "JD@mail.com", null, null);
+    ContactData contact = new ContactData("C", null, "C", null, null, "JD@mail.com", null, null);
     app.getContactHelper().fillContactForm((contact), true);
     app.getContactHelper().submitNewContact();
     app.getContactHelper().goToContactsPage();

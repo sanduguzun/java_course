@@ -9,18 +9,16 @@ import java.util.List;
 
 public class ContactModificationTests extends TestBase {
 
-  @Test(enabled = false)
-  public void testContactDeletion() {
+  @Test()
+  public void testContactModification() {
     app.goTo().goToHomePage();
     app.getContactHelper().goToContactsPage();
     if (!app.getContactHelper().isThereAContact()) {
       app.getContactHelper().createContact(new ContactData("J", null, "D", null, null, "jd@mail.com", null, null), true);
     }
     List<ContactData> before = app.getContactHelper().getContactList();
-    app.getContactHelper().modifyContact();
-    ContactData contact = new ContactData(before.get(before.size() - 1).getId(), "J", null, "D", null, null, "jd@mail.com", null, null);
-    app.getContactHelper().fillContactForm((contact), false);
-    app.getContactHelper().submitModifyContact();
+    ContactData contact = new ContactData(before.get(before.size() - 1).getId(), "JM", null, "DM", null, null, "jd@mail.com", null, null);
+    app.getContactHelper().edit(contact);
     app.getContactHelper().goToContactsPage();
     List<ContactData> after = app.getContactHelper().getContactList();
     Assert.assertEquals(after.size(), before.size());
