@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import ru.stqa.pft.addressbook.model.ContactData;
 import ru.stqa.pft.addressbook.model.Contacts;
+import ru.stqa.pft.addressbook.model.Groups;
 
 import java.util.HashSet;
 import java.util.List;
@@ -43,7 +44,6 @@ public class ContactHelper extends HelperBase {
     click(By.linkText("add new"));
   }
 
-
   public void selectContactById(int id) {
     wd.findElement(By.cssSelector("input[value='" + id + "']")).click();
   }
@@ -72,13 +72,14 @@ public class ContactHelper extends HelperBase {
    goToCreateNewContact();
    fillContactForm(contact, true);
    submitNewContact();
+   contactCache = null;
    goToContactsPage();
   }
-
 
   public void delete(ContactData contact) {
     selectContactById(contact.getId());
     deleteSelectedContact();
+    contactCache = null;
     goToContactsPage();
   }
 
@@ -87,15 +88,20 @@ public class ContactHelper extends HelperBase {
     ContactModificationById(contact.getId());
     fillContactForm(contact, false);
     submitModifyContact();
+    contactCache = null;
   }
 
-  public int getContactCount() {
+  public int count() {
     return wd.findElements(By.name("selected[]")).size();
   }
 
+  private Contacts contactCache = null;
 
   public Contacts all() {
-    Contacts contacts = new Contacts();
+    if (contactCache != null) {
+      return new Contacts(contactCache);
+    }
+    contactCache = new Contacts();
     List<WebElement> listRows = wd.findElements(By.name("entry"));
     for (WebElement row : listRows) {
       List<WebElement> cells = row.findElements(By.tagName("td"));
@@ -103,9 +109,9 @@ public class ContactHelper extends HelperBase {
       String lastname = cells.get(1).getText();
       String firstname = cells.get(2).getText();
       String email = cells.get(4).getText();
-      contacts.add(new ContactData().withId(id).withFirstName(firstname).withLastName(lastname));
+      contactCache.add(new ContactData().withId(id).withFirstName(firstname).withLastName(lastname));
     }
-    return contacts;
+    return new Contacts(contactCache);
   }
 
 }
