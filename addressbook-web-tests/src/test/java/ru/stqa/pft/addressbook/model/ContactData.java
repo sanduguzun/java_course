@@ -11,19 +11,27 @@ public class ContactData {
   @Expose
   private String firstName;
   private String middleName;
+  @Expose
   private String lastName;
   private String title;
   private String company;
+  @Expose
   private String email1;
+  @Expose
   private String email2;
+  @Expose
   private String email3;
+  @Expose
   private String homePhone;
+  @Expose
   private String mobilePhone;
+  @Expose
   private String workPhone;
   private String allPhones;
   private String allEmails;
   private String phone2;
   private String group;
+  @Expose
   private String address;
   private File photo;
 
