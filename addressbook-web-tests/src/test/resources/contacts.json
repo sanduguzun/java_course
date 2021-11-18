@@ -20,49 +20,5 @@
     "mobilePhone": "mobilePhone 1",
     "workPhone": "workPhone 1",
     "address": "address 1"
-  },
-  {
-    "firstName": "firstName 2",
-    "lastName": "lastName 2",
-    "email1": "email1 2",
-    "email2": "email2 2",
-    "email3": "email3 2",
-    "homePhone": "homePhone 2",
-    "mobilePhone": "mobilePhone 2",
-    "workPhone": "workPhone 2",
-    "address": "address 2"
-  },
-  {
-    "firstName": "firstName 3",
-    "lastName": "lastName 3",
-    "email1": "email1 3",
-    "email2": "email2 3",
-    "email3": "email3 3",
-    "homePhone": "homePhone 3",
-    "mobilePhone": "mobilePhone 3",
-    "workPhone": "workPhone 3",
-    "address": "address 3"
-  },
-  {
-    "firstName": "firstName 4",
-    "lastName": "lastName 4",
-    "email1": "email1 4",
-    "email2": "email2 4",
-    "email3": "email3 4",
-    "homePhone": "homePhone 4",
-    "mobilePhone": "mobilePhone 4",
-    "workPhone": "workPhone 4",
-    "address": "address 4"
-  },
-  {
-    "firstName": "firstName 5",
-    "lastName": "lastName 5",
-    "email1": "email1 5",
-    "email2": "email2 5",
-    "email3": "email3 5",
-    "homePhone": "homePhone 5",
-    "mobilePhone": "mobilePhone 5",
-    "workPhone": "workPhone 5",
-    "address": "address 5"
   }
 ]
