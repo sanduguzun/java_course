@@ -6,7 +6,6 @@ import org.hibernate.annotations.Type;
 import javax.persistence.*;
 import java.io.File;
 import java.util.Objects;
-import java.util.logging.FileHandler;
 @Entity
 @Table(name = "addressbook")
 
@@ -51,6 +50,7 @@ public class ContactData {
   private String allPhones;
   @Transient
   private String allEmails;
+  @Column(name = "phone2")
   @Type(type = "text")
   private String phone2;
   @Transient
